@@ -32,12 +32,16 @@ function SongPlayerPage() {
   const handleNext = () => {
     if (currentIndex < playlist.size - 1) {
       setCurrentIndex(currentIndex + 1);
+    }else {
+      setCurrentIndex(0);
     }
   };
 
   const handlePrev = () => {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
+    } else{
+      setCurrentIndex(playlist.size -1);
     }
   };
 
@@ -60,13 +64,13 @@ function SongPlayerPage() {
       )}
 
       <div className="controls">
-        <button onClick={handlePrev} disabled={currentIndex === 0}>
+        <button onClick={handlePrev}>
           Anterior
         </button>
         <span className="track-info">
           Canción {currentIndex + 1} de {playlist.size}
         </span>
-        <button onClick={handleNext} disabled={currentIndex === playlist.size - 1}>
+        <button onClick={handleNext}>
           Siguiente
         </button>
       </div>
