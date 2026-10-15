@@ -1,0 +1,131 @@
+$fondo: #f5f5f5;
+$texto: #222222;
+$principal: #2b6cb0;
+$principal-hover: #234e82;
+$borde: #cccccc;
+$error: #c53030;
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: $fondo;
+  color: $texto;
+}
+
+main {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: #ffffff;
+  border: 1px solid $borde;
+  border-radius: 8px;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+input,
+select {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid $borde;
+  border-radius: 4px;
+}
+
+button {
+  padding: 0.4rem 0.8rem;
+  background: $principal;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background: $principal-hover;
+  }
+}
+
+.explorador {
+  &__cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.formulario {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: #edf2f7;
+  border-radius: 6px;
+
+  p {
+    margin: 0;
+    width: 100%;
+  }
+
+  &__error {
+    color: $error;
+  }
+}
+
+.arbol,
+.nodo__hijos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nodo {
+  &__hijos {
+    margin-left: 0.8rem;
+    padding-left: 1.2rem;
+    border-left: 2px solid $borde;
+  }
+
+  &__fila {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    width: 100%;
+    padding: 0.35rem 0.5rem;
+    background: transparent;
+    color: $texto;
+    text-align: left;
+
+    &:hover {
+      background: #e2e8f0;
+    }
+
+    &--activa {
+      background: #bee3f8;
+      font-weight: bold;
+    }
+  }
+
+  &__icono {
+    display: inline-block;
+    width: 1rem;
+    height: 0.8rem;
+    border-radius: 2px;
+
+    &--carpeta {
+      background: #ecc94b;
+    }
+
+    &--archivo {
+      width: 0.7rem;
+      height: 1rem;
+      background: #a0aec0;
+    }
+  }
+
+  &__correo {
+    margin-left: auto;
+    font-size: 0.75rem;
+    color: #666666;
+  }
+}
