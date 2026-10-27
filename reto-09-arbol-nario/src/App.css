@@ -1,0 +1,149 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: block;
+  min-width: 320px;
+  background: #0d1224;
+  color: #f5f6ff;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 260px;
+  background: #181e35;
+  border-right: 1px solid #ffffff15;
+  padding: 35px 20px;
+  flex-shrink: 0;
+}
+
+.sidebar h2 {
+  font-size: 27px;
+  color: #a78bfa;
+  margin: 0;
+}
+
+.sidebar p {
+  color: #929bb7;
+  font-size: 13px;
+  margin: 8px 0 35px;
+}
+
+.opcion-menu {
+  margin-bottom: 5px;
+}
+
+.fila-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.fila-menu:hover {
+  background: #ffffff10;
+}
+
+.fila-menu.activo {
+  background: #7654e5;
+}
+
+.fila-menu a {
+  display: block;
+  flex: 1;
+  padding: 12px 14px;
+  color: #e4e6f4;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.fila-menu button {
+  background: transparent;
+  border: none;
+  color: #d5c8ff;
+  font-size: 20px;
+  padding: 6px 14px;
+  cursor: pointer;
+}
+
+.submenus {
+  margin-left: 15px;
+  padding-left: 12px;
+  border-left: 1px solid #6d58d055;
+}
+
+.contenido {
+  flex: 1;
+  min-width: 0;
+  padding: 55px 6%;
+}
+
+.encabezado h1 {
+  font-size: 36px;
+  margin: 0;
+  color: white;
+}
+
+.encabezado p {
+  color: #9da9c9;
+  margin-top: 10px;
+}
+
+.tarjeta {
+  margin-top: 35px;
+  padding: 35px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #232b49, #171e36);
+  border: 1px solid #ffffff18;
+  box-shadow: 0 20px 50px #00000030;
+}
+
+.tarjeta h2 {
+  color: #b29aff;
+  margin-top: 0;
+}
+
+.tarjeta p {
+  color: #c1c9df;
+}
+
+@media (max-width: 700px) {
+  .app {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .sidebar p {
+    margin-bottom: 20px;
+  }
+
+  .contenido {
+    padding: 30px 20px;
+  }
+
+  .encabezado h1 {
+    font-size: 28px;
+  }
+
+  .tarjeta {
+    padding: 25px;
+  }
+}
